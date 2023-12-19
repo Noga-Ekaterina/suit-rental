@@ -1,0 +1,11 @@
+.home-row {
+   @extend %flexSB;
+   font-size: clamp(18px, 1.777vw, 32px);
+   &__logo {
+      font-weight: 800;
+   }
+   &__num {
+      font-weight: 700;
+      
+   }
+}

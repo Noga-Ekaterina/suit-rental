@@ -1,8 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap");
+.home-row {
+  font-size: clamp(18px, 1.777vw, 32px);
+}
+.home-row__logo {
+  font-weight: 800;
+}
+.home-row__num {
+  font-weight: 700;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Montserrat Alternates";
+  color: #041A3F;
 }
 
 body > * {
@@ -12,4 +23,19 @@ body > * {
 .content {
   max-width: 1204px;
   margin-inline: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lith-text {
+  color: #FFCA33;
+  font-size: inherit;
+  font-weight: inherit;
 }/*# sourceMappingURL=style.css.map */
