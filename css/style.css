@@ -18,10 +18,17 @@
 
 body > * {
   padding-inline: 20px;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  body > * {
+    padding-inline: 15px;
+  }
 }
 
 .content {
   max-width: 1204px;
+  padding-block: 20px 64px;
   margin-inline: auto;
 }
 
@@ -38,4 +45,26 @@ a {
   color: #FFCA33;
   font-size: inherit;
   font-weight: inherit;
+}
+
+h1 {
+  font-size: clamp(26px, 4.4vw, 52px);
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  h1 {
+    font-size: 42px;
+  }
+}
+
+.btn {
+  background: #FFCA33;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 4px;
+}
+
+.img img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

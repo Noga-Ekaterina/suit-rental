@@ -1,1 +1,51 @@
 @import "_medias.scss";
+
+.header {
+   background: #EFF5FF;
+   *{
+      position: relative;
+      z-index: 2;
+   }
+   &__backg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -150px;
+      right: -298px;
+      background: #FAFAFA;
+      z-index: 1;
+      @include desktop {
+         border-bottom-left-radius: 300px;
+      }
+   }
+   &__content {
+      margin-top: 50px;
+      @include desktop {
+         display: flex;
+         flex-direction: row-reverse;
+         justify-content: space-between;
+         align-items: center;
+      }
+      @include mob-and-t {
+         text-align: center;
+      }
+   }  
+   &__text {
+   }
+   h1{
+      margin-bottom: 32px;
+      @include desktop {
+         margin-bottom: 48px;
+      }
+   }
+   &__img {
+      flex-shrink: 0;
+      width: 47.3%;
+      @include mob-and-t {
+         margin-inline: auto;
+      }
+      @include mob {
+         width: 65%;
+      }
+   }
+}
