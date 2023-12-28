@@ -68,7 +68,7 @@ h2 {
   font-size: clamp(22px, 3.75vw, 42px);
 }
 
-.saits {
+.suits {
   margin-block: 32px 60px;
   display: flex;
   row-gap: 16px;
@@ -79,27 +79,27 @@ h2 {
   cursor: pointer;
 }
 
-.sait {
+.suit {
   min-width: 286px;
   border-radius: 20px;
   background: #fff;
 }
-.sait__img {
+.suit__img {
   width: 100%;
 }
-.sait__text {
+.suit__text {
   background: #FAFAFA;
   text-align: center;
   padding: 32px 16px;
 }
-.sait__text *:not(.btn) {
+.suit__text *:not(.btn) {
   margin-bottom: 15px;
 }
-.sait__title {
+.suit__title {
   font-size: 24px;
   font-weight: 700;
 }
-.sait__price {
+.suit__price {
   font-size: 18px;
   font-weight: 700;
 }/*# sourceMappingURL=home.css.map */
