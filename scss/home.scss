@@ -1,7 +1,8 @@
+@import "_vars.scss";
 @import "_medias.scss";
 
 .header {
-   background: #EFF5FF;
+   @include backg-blue;
    *{
       position: relative;
       z-index: 2;
@@ -30,8 +31,6 @@
          text-align: center;
       }
    }  
-   &__text {
-   }
    h1{
       margin-bottom: 32px;
       @include desktop {
@@ -47,5 +46,46 @@
       @include mob {
          width: 65%;
       }
+   }
+}
+main{
+   padding-block: 64px;
+}
+h2{
+   text-align: center;
+   font-size: clamp(22px, 3.75vw, 42px);
+}
+.saits{
+   margin-block: 32px 60px;
+   display: flex;
+   row-gap: 16px;
+   flex-wrap: wrap;
+   justify-content: center;
+   column-gap: 20px;
+   cursor: pointer;
+}
+.sait{
+   min-width: 286px;
+   border-radius: 20px;
+   background: #fff;
+   &__img{
+      width: 100%;
+   }
+   &__text{
+      background: #FAFAFA;
+      text-align: center;
+      padding: 32px 16px;
+      *:not(.btn){
+         margin-bottom: 15px;
+      }
+   }
+   &__title{
+      font-size: 24px;
+      font-weight: 700;
+   }
+   &__sizes{}
+   &__price{
+      font-size: 18px;
+      font-weight: 700;
    }
 }

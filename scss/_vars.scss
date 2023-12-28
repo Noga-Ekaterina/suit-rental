@@ -1,2 +1,7 @@
 $darck: #041A3F;
-$lith: #FFCA33
+$lith: #FFCA33;
+
+@mixin backg-blue{
+   background: #EFF5FF;
+   background-image: url(../img/backg.png);
+}
