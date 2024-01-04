@@ -2,6 +2,7 @@
 @import "_vars.scss";
 @import "_medias.scss";
 @import "_header_and_footer.scss";
+@import "_style_suit.scss";
 
 *{
    margin: 0;
@@ -9,7 +10,7 @@
    font-family: "Montserrat Alternates";
    color: $darck;
 }
-body>*{
+body>*:not(.modal){
    padding-inline: 20px;
    overflow: hidden;
    @include mob {

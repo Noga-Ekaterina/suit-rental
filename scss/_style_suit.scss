@@ -1,0 +1,101 @@
+.modal{
+   position: fixed;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.4);
+   z-index: 8;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   &__wrapper{
+      position: relative;
+      width: 100%;
+      background:  #FBFBFB;
+      background-image: url(../img/backg.png);
+      max-height: 100vh;
+      max-width: 1920px;
+      box-sizing: border-box;
+      padding-block: 50px;
+      overflow: auto;
+   }
+   &__close{
+      cursor: pointer;
+      position: absolute;
+      top: 24px;
+      right: 24px;
+   }
+}
+.suit-content{
+   @extend %flexSB;
+   column-gap: 20px;
+   padding-inline: 15px;
+   box-sizing: border-box;
+   @include desktop {
+      padding-right: 9%;
+   }
+   @include mob {
+      flex-wrap: wrap;
+   }
+   &__imgs{
+      @extend %flexSB;
+      flex-shrink: 0;
+      width: 46.7%;
+      @include mob {
+         flex-wrap: wrap-reverse;
+         max-width: 100%;
+      }
+      @include min-mob {
+         width: 100%;
+      }
+      img{
+         width: 100%;
+      }
+   }
+   &__big-img{
+      box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.04);
+      height: fit-content;
+      @include t-u {
+         width: 82.7%;
+      }
+   }
+   &__min-imgs{
+      display: flex;
+      align-items: center;
+      align-content: start;
+      gap: 15px 20px;
+      @include t-u {
+         flex-wrap: wrap;
+         width: 11%;
+      }
+   }
+   .min-imgs__item{
+      cursor: pointer;
+      min-width: 30px;
+   }
+   &__text{
+      min-width: 300px;
+      width: 40.2%;
+      @include min-mob {
+         width: 100%;
+      }
+   }
+   &__name{
+      font-size: clamp(22px, 3.75vw, 42px);
+      font-weight: 800;
+      
+   }
+   &__title{
+      font-weight: 700;
+   }
+   &__price{
+      color: $lith;
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: max(12px, 5%);
+      @include mob {
+         font-size: 24px;
+      }
+   }
+   p{
+      margin-block: 12px max(12px, 5%);
+   }
+}

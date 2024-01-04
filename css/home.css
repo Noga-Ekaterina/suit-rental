@@ -76,12 +76,12 @@ h2 {
   justify-content: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
-  cursor: pointer;
 }
 
 .suit {
   min-width: 286px;
   border-radius: 20px;
+  cursor: pointer;
   background: #fff;
 }
 .suit__img {
@@ -102,4 +102,9 @@ h2 {
 .suit__price {
   font-size: 18px;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .suit-content__title {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=home.css.map */
