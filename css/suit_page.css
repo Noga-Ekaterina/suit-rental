@@ -1,0 +1,13 @@
+.suit-content__price {
+  margin-top: max(12px, 5%);
+}
+
+.suit-description p {
+  margin-top: max(12px, 1.9%);
+}
+.suit-description__title {
+  font-weight: 800;
+}
+.suit-description__title + p {
+  margin-top: 12px;
+}/*# sourceMappingURL=suit_page.css.map */

@@ -16,6 +16,13 @@ fetch("scripts/suits.json")
             </div>
          `);
       })
+      document.querySelectorAll('.suit'). forEach((block, index)=>{
+         block.onclick=()=>{
+            if (event.target!= block.querySelector('.suit__btn')) {
+               window.location.href=`suit.html?id=${suits[index].id}`
+            }
+         }
+      })
       document.querySelectorAll('.suit__btn'). forEach((btn, index)=>{
          btn.onclick=()=>{
             let suit= suits[index]

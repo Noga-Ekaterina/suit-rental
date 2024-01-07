@@ -3,6 +3,9 @@
 
 .header {
    @include backg-blue;
+   .content{
+      padding-bottom: 64px;
+   }
    *{
       position: relative;
       z-index: 2;
@@ -87,10 +90,15 @@ h2{
       font-size: 18px;
       font-weight: 700;
    }
-   &-content__title{
-      @include t-u {
-         font-size: 18px;
+   &-content{
+      &__title{
+         @include t-u {
+            font-size: 18px;
+         }
       }
-      
+      &__name{
+         font-size: clamp(22px, 3.75vw, 42px);
+         font-weight: 800;
+      }
    }
 }
