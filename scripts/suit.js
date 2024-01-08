@@ -6,6 +6,7 @@ fetch("scripts/suits.json")
       const suits= JSON.parse(jsonStr)
       suits. forEach((suit)=>{
          if (suit.id==new URLSearchParams(window.location.search).get('id')) {
+            document.querySelector('title').innerHTML=`${suit.name}. SuperSuit`
             document.querySelector('main .content').insertAdjacentHTML("beforeend", `
                <div class="content suit-content">
                   <div class="suit-content__imgs">
