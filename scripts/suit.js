@@ -1,3 +1,4 @@
+import { closeModal, changeImg } from "./functions.js";
 fetch("scripts/suits.json")
    .then(response => response.json())
    .then(data => {
@@ -35,6 +36,7 @@ fetch("scripts/suits.json")
                      <img src="img/${suit.name}/${i+1}min.webp">
                   </div>
                `);
+               changeImg(suit)
             }
          }
       })

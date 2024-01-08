@@ -54,7 +54,11 @@
       overflow: hidden;
       border-radius: 10px 10px 10px 0;
       box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.04);
-      height: fit-content;
+      background: #fff;
+      aspect-ratio: 93/104;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       @include t-u {
          width: 82.7%;
       }

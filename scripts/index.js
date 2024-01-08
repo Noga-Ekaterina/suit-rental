@@ -1,3 +1,4 @@
+import { closeModal, changeImg } from "./functions.js";
 fetch("scripts/suits.json")
    .then(response => response.json())
    .then(data => {
@@ -61,11 +62,7 @@ fetch("scripts/suits.json")
                `);
             }
             document.querySelector('.modal__close').onclick= closeModal
+            changeImg(suit)
          }
       })
    });
-
-const closeModal = ()=>{
-   document.body.style.overflow= ""
-   document.querySelector('.modal').remove()
-};
