@@ -1,6 +1,17 @@
 const closeModal = ()=>{
-   document.body.style.overflow= ""
-   document.querySelector('.modal').remove()
+   const suitModal = document.querySelector('.modal .suit-content');
+   if (document.querySelector('.block-form')==null) {
+      document.body.style.overflow= ""
+      document.querySelector('.modal').remove()
+   }else{
+      document.querySelector('.block-form').remove()
+      if (suitModal==null) {
+         document.body.style.overflow= ""
+         document.querySelector('.modal').remove()
+      }else{
+         suitModal.style.display=""
+      }
+   }
 };
 const changeImg = (suit)=>{
    
@@ -10,5 +21,75 @@ const changeImg = (suit)=>{
       }
    });
 };
+const openForm = (suit)=>{
+   document.querySelectorAll('.suit-content__btn'). forEach((btn)=>{
+      btn.onclick=()=>{
+         if (document.querySelector('.modal')==null) {
+            document.body.style.overflow= "hidden"
+            document.body.insertAdjacentHTML("afterbegin", `
+               <div class="modal">
+                  <div class="modal__wrapper">
+                     <div class="modal__close"><img src="img/close.png"></div>
+                  </div>
+               </div>
+            `)
+            document.querySelector('.modal__close').onclick= closeModal
+            
+         }else
+            document.querySelector('.modal .suit-content').style.display="none";
 
-export {closeModal, changeImg}
+         document.querySelector('.modal__wrapper').insertAdjacentHTML("beforeend", `
+            <div class="modal__block-form block-form">
+               <div class="block-form__title">Аренда костюма “${suit.name}”</div>
+               <p>Пожалуйста, укажите ваши контактные данные, чтобы мы забронировали костюм на ваше имя</p>
+               <form action="">
+                  <input class="block-form__input" type="text" name="userName" placeholder="Как вас зовут?">
+                  <div class="block-form__phone block-phone">
+                     <input class="block-form__input block-phone__input" type="tel" name="number" value="+7 ">
+                     <div class="block-phone__placeholder">
+                     </div>
+                  </div>
+                  <select class="block-form__input block-form__select">
+                     <option disabled selected>Длительность аренды?</option>
+                     <option value="1 день">1 день</option>
+                     <option value="3 дня">3 дня</option>
+                     <option value="неделя">неделя</option>
+                     <option value="месяц">месяц</option>
+                  </select>
+                  <input type="submit" class="btn">
+               </form>
+            </div>
+         `)
+         const inputPhone = document.querySelector('.block-phone__input');
+         const placeholder = document.querySelector('.block-phone__placeholder');
+
+         const phoneMask = new IMask(inputPhone, {
+            mask: "+{7} (000) 000-00-00",
+         });
+
+         const placeholderArr = Array.from("+7 (977) 325-41-60");
+         placeholderArr. forEach((el)=>{
+            placeholder.insertAdjacentHTML("beforeend", `<span>${el}</span>`)
+         })
+
+         const placeholderSpans = document.querySelectorAll('.block-phone__placeholder span');
+         for (let i = 0; i < 2; i++) {
+            placeholderSpans[i].style.opacity="0"
+         }
+         
+         inputPhone.oninput=()=>{
+            let valueLength= inputPhone.value.length
+            for (let i = 0; i < valueLength; i++) {
+               placeholderSpans[i].style.opacity="0";
+            }
+            if(valueLength>0){
+               for (let i = valueLength-1; i < placeholderArr.length; i++) {
+                  placeholderSpans[i].style.opacity=""
+               }
+            }
+         }
+      }
+   })
+};
+
+export {closeModal, changeImg, openForm}
