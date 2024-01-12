@@ -1,4 +1,4 @@
-import { closeModal, changeImg, openForm } from "./functions.js";
+import { closeModal, changeImg, openForm, checkForm } from "./functions.js";
 fetch("scripts/suits.json")
    .then(response => response.json())
    .then(data => {

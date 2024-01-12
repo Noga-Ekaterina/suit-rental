@@ -42,6 +42,15 @@ header .content, footer .content {
   top: 24px;
   right: 24px;
 }
+.modal__post-form {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+}
 
 .suit-content {
   -moz-column-gap: 20px;
@@ -135,7 +144,7 @@ header .content, footer .content {
   margin-block: 12px max(12px, 5%);
 }
 
-.block-form {
+.block-form, .modal__post-form {
   margin: auto;
   width: 600px;
   box-sizing: border-box;
@@ -145,11 +154,11 @@ header .content, footer .content {
   box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.04);
 }
 @media screen and (max-width: 767px) {
-  .block-form {
+  .block-form, .modal__post-form {
     width: 300px;
   }
 }
-.block-form * {
+.block-form *, .modal__post-form * {
   width: 100%;
 }
 .block-form__title {
@@ -157,11 +166,11 @@ header .content, footer .content {
   font-weight: 700;
   text-align: center;
 }
-.block-form p {
+.block-form p, .modal__post-form p {
   text-align: center;
   margin-block: 16px 32px;
 }
-.block-form form > * {
+.block-form form > *, .modal__post-form form > * {
   margin-top: 16px;
 }
 .block-form__input {
