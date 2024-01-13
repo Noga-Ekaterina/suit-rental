@@ -206,6 +206,14 @@ header .content, footer .content {
   display: none;
 }
 
+.check-block {
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.check-block__input {
+  width: auto;
+}
+
 .block-phone {
   position: relative;
 }
@@ -226,6 +234,7 @@ header .content, footer .content {
 * {
   margin: 0;
   padding: 0;
+  font-size: 16px;
   font-family: "Montserrat Alternates";
   color: #041A3F;
 }
@@ -275,7 +284,7 @@ a {
   text-decoration: none;
 }
 
-.home-row, .suit-content, .suit-content__imgs {
+.home-row, .suit-content, .suit-content__imgs, .check-block {
   display: flex;
   justify-content: space-between;
 }
@@ -304,6 +313,10 @@ h1 {
   border-radius: 4px;
   border: 0;
   cursor: pointer;
+}
+.btn[disabled] {
+  opacity: 0.4;
+  cursor: default;
 }
 
 .img img {

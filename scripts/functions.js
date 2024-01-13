@@ -66,6 +66,11 @@ const openForm = (suit)=>{
                      <option value="неделя">неделя</option>
                      <option value="месяц">месяц</option>
                   </select>
+                  <div class="block-form__checkbox check-block">
+                     <input class="check-block__input" type="checkbox" name="agreement" id="agreement">
+                     <label for="agreement">Я согласен на обработку моих персональных данных</label>
+                  </div>
+
                   <input type="submit" class="btn" name="btnSubmit" disabled>
                </form>
             </div>
@@ -105,7 +110,7 @@ const openForm = (suit)=>{
 const checkForm = (suit)=>{
    const form = document.querySelector('form')
    form.oninput=()=>{
-      if(form.userName.value!="" && form.number.value.length==18 && form.rentalDuration.value!=""){
+      if(form.userName.value!="" && form.number.value.length==18 && form.rentalDuration.value!="" && form.agreement.checked){
          form.btnSubmit.removeAttribute("disabled")
       }else{
          form.btnSubmit.setAttribute("disabled", "true")

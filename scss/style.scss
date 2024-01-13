@@ -7,6 +7,7 @@
 *{
    margin: 0;
    padding: 0;
+   font-size: 16px;
    font-family: "Montserrat Alternates";
    color: $darck;
 }
@@ -73,6 +74,10 @@ h1{
    border-radius: 4px;
    border: 0;
    cursor: pointer;
+   &[disabled]{
+      opacity: 0.4;
+      cursor: default;
+   }
 }
 .img img{
    width: 100%;

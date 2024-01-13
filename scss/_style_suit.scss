@@ -164,6 +164,13 @@
       }
    }
 }
+.check-block{
+   @extend %flexSB;
+   column-gap: 10px;
+   &__input{
+      width: auto;
+   }
+}
 
 .block-phone{
    position: relative;
