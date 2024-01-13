@@ -1,4 +1,4 @@
-import { closeModal, changeImg, openForm, checkForm} from "./functions.js";
+import { closePreloader, closeModal, changeImg, openForm, checkForm} from "./functions.js";
 fetch("scripts/suits.json")
    .then(response => response.json())
    .then(data => {
@@ -61,9 +61,11 @@ fetch("scripts/suits.json")
                   </div>
                `);
             }
+            document.body.style.overflow= "hidden"
             openForm(suit)
             document.querySelector('.modal__close').onclick= closeModal
             changeImg(suit)
          }
       })
+      closePreloader()
    });

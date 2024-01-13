@@ -1,3 +1,13 @@
+const closePreloader = ()=>{
+   const preloader = document.querySelector('.preloader');
+   if (document.readyState=="complete") {
+      preloader.style.opacity="0"
+      setTimeout(() => {
+         preloader.remove()
+         document.body.classList.add("load")
+   }, 300);
+   }
+};
 const closeModal = ()=>{
    const suitModal = document.querySelector('.modal .suit-content');
    if (document.querySelector('.block-form')==null) {
@@ -34,7 +44,7 @@ const openForm = (suit)=>{
                </div>
             `)
             document.querySelector('.modal__close').onclick= closeModal
-            
+            document.body.style.overflow= "hidden"
          }else
             document.querySelector('.modal .suit-content').style.display="none";
 
@@ -110,4 +120,4 @@ const checkForm = (suit)=>{
    }
 };
 
-export {closeModal, changeImg, openForm, checkForm}
+export {closePreloader, closeModal, changeImg, openForm, checkForm}

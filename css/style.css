@@ -153,7 +153,7 @@ header .content, footer .content {
   margin-block: 12px max(12px, 5%);
 }
 
-.block-form, .modal__post-form {
+.block-form, .preloader__wrapper, .modal__post-form {
   margin: auto;
   width: 600px;
   box-sizing: border-box;
@@ -163,11 +163,11 @@ header .content, footer .content {
   box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.04);
 }
 @media screen and (max-width: 767px) {
-  .block-form, .modal__post-form {
+  .block-form, .preloader__wrapper, .modal__post-form {
     width: 300px;
   }
 }
-.block-form *, .modal__post-form * {
+.block-form *, .preloader__wrapper *, .modal__post-form * {
   width: 100%;
 }
 .block-form__title {
@@ -175,11 +175,11 @@ header .content, footer .content {
   font-weight: 700;
   text-align: center;
 }
-.block-form p, .modal__post-form p {
+.block-form p, .preloader__wrapper p, .modal__post-form p {
   text-align: center;
   margin-block: 16px 32px;
 }
-.block-form form > *, .modal__post-form form > * {
+.block-form form > *, .preloader__wrapper form > *, .modal__post-form form > * {
   margin-top: 16px;
 }
 .block-form__input {
@@ -228,6 +228,31 @@ header .content, footer .content {
   padding: 0;
   font-family: "Montserrat Alternates";
   color: #041A3F;
+}
+
+body {
+  overflow-y: hidden;
+}
+body.load {
+  overflow-y: auto;
+}
+
+.preloader {
+  transition: 300ms;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: #FBFBFB;
+  background-image: url(../img/backg.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preloader__wrapper {
+  text-align: center;
+}
+.preloader__wrapper p {
+  margin: 0;
 }
 
 body > *:not(.modal) {

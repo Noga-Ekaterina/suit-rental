@@ -10,6 +10,30 @@
    font-family: "Montserrat Alternates";
    color: $darck;
 }
+body{
+   overflow-y: hidden;
+   &.load{
+      overflow-y: auto;
+   }
+}
+.preloader{
+   transition: 300ms;
+   position: fixed;
+   inset: 0;
+   z-index: 99;
+   background:  #FBFBFB;
+   background-image: url(../img/backg.png);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &__wrapper{
+      @extend .block-form;
+      text-align: center;
+      p{
+         margin: 0;
+      }
+   }
+}
 body>*:not(.modal){
    padding-inline: 20px;
    overflow: hidden;
