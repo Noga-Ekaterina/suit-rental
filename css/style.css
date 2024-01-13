@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap");
 .home-row {
   font-size: clamp(18px, 1.777vw, 32px);
+  flex-wrap: wrap;
+  row-gap: 15px;
 }
 .home-row__logo {
   font-weight: 800;
@@ -53,6 +55,7 @@ header .content, footer .content {
 }
 
 .suit-content {
+  row-gap: 15px;
   -moz-column-gap: 20px;
        column-gap: 20px;
   padding-inline: 15px;
@@ -75,6 +78,7 @@ header .content, footer .content {
 @media screen and (max-width: 767px) {
   .suit-content__imgs {
     flex-wrap: wrap-reverse;
+    row-gap: 15px;
     max-width: 100%;
   }
 }
@@ -116,6 +120,11 @@ header .content, footer .content {
 .suit-content .min-imgs__item {
   cursor: pointer;
   min-width: 30px;
+}
+@media screen and (max-width: 600px) {
+  .suit-content .min-imgs__item {
+    min-width: 15px;
+  }
 }
 .suit-content__text {
   min-width: 300px;

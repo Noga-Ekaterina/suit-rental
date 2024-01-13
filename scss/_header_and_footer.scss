@@ -1,6 +1,8 @@
 .home-row {
    @extend %flexSB;
    font-size: clamp(18px, 1.777vw, 32px);
+   flex-wrap: wrap;
+   row-gap: 15px;
    &__logo {
       font-weight: 800;
    }

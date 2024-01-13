@@ -36,6 +36,7 @@
 }
 .suit-content{
    @extend %flexSB;
+   row-gap: 15px;
    column-gap: 20px;
    padding-inline: 15px;
    box-sizing: border-box;
@@ -51,6 +52,7 @@
       width: 46.7%;
       @include mob {
          flex-wrap: wrap-reverse;
+         row-gap: 15px;
          max-width: 100%;
       }
       @include min-mob {
@@ -86,6 +88,9 @@
    .min-imgs__item{
       cursor: pointer;
       min-width: 30px;
+      @include min-mob {
+         min-width: 15px;
+      }
    }
    &__text{
       min-width: 300px;
